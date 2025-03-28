@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | Mualliflar</title>
+</head>
+<body>
+<h1>Mualliflar royxati</h1>
+<form  method="get">
+  <input type="text" name="search"  value="{{search_param}}" placeholder="Ism kiriting">
+  <button type="submit" >Qidirish </button>
+</form>
+<hr>
+{%for muallif in mualliflar%}
+    <p>
+        {{forloop.counter}}.
+        <a href="/muallif/{{muallif.id}}">{{muallif.ism}}</a>
+    </p>
+{%endfor%}
+<a href="/muallif_qoshish/">
+    <button>Yangi Muallif qoshish</button>
+</a>
+</body>

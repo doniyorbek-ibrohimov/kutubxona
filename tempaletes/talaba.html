@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | talaba Xaqaida</title>
+</head>
+<body>
+<h1>{{talaba.ism}} malumotlari</h1>
+<form  method="get">
+  <input type="text" name="search"  value="{{search_param}} " placeholder="Ism kiriting">
+  <button type="submit" >Qidirish </button>
+</form>
+<hr>
+<p>Guruh:{{talaba.guruh}}</p>
+<p>Kurs:{{talaba.kurs}}</p>
+<p>Kitob soni:{{talaba.kitob_soni}}</p>
+<a href="/talaba/delete/{{talaba.id}}"><button> ❌ Ochirish</button></a>
+</body>
+</html>

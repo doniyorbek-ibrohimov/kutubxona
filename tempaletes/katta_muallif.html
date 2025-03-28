@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Eng Katta Mualliflar</title>
+</head>
+<body>
+<h1> Eng katta Mualliflar royxati</h1>
+<hr>
+{%for muallif in mualliflar%}
+    <p>
+        {{forloop.counter}}.{{muallif.ism}}
+    </p>
+{%endfor%}
+
+</body>
+</html>

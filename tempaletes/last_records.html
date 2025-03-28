@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Oxirgi Recordlar</title>
+</head>
+<body>
+<h1>Eng Oxirgi Recordlar</h1>
+<hr>
+{%for record in recordlar%}
+    <p>
+        {{forloop.counter}}.{{record.talaba}}
+    </p>
+{%endfor%}
+</body>
+</html>

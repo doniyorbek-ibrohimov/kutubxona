@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Tirik Mualliflarni kitoblari</title>
+</head>
+<body>
+<h1>Tirik Mualliflarni kitoblari</h1>
+<hr>
+{%for kitob in kitoblar%}
+    <p>
+        {{forloop.counter}}.{{kitob.nom}}
+    </p>
+{%endfor%}
+
+</body>
+</html>

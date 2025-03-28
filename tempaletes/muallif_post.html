@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mualliflar | Qoshish</title>
+</head>
+<body>
+<h2>Yangi Muallif yaraatish</h2>
+<form method="post">
+  {% csrf_token %}
+  <label for="ism">Ism:</label>
+  <input type="text" name="ism" id="ism" required>
+  <br><br>
+  <label for="jins">Jins:</label>
+  <input type="text" name="jins" id="jins">
+  <br><br>
+  <label for="tugilgan_sana"> Tugilgan sana:</label>
+  <input type="date" name="tugilgan_sana" id="tugilgan_sana">
+  <br><br>kitob_s
+<label for="kitob_s">Kitob soni:</label>
+  <input type="number" name="kitob_s" id="kitob_s">
+  <br><br>
+<label for="tirik">Tirkmi::</label>
+  <input type="checkbox" name="tirkmi" id="tirik" required>
+  <br><br>
+  <button>Saqlash</button>
+
+</form>
+</body>
+</html>

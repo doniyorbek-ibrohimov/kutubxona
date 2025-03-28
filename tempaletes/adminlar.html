@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Adminlar Royxati</title>
+</head>
+<body>
+<h2>Adminlar Royxati</h2>
+<hr>
+<h3>Yangi Admin qoshish</h3>
+<form method="post">
+    {%csrf_token%}
+    <label for="ism"></label>
+    <input type="text" name="ism" id="ism" required>
+    <label for="ish_vaqti"></label>
+    <select name="ish_vaqti" id="ish_vaqti" required>
+        <option value="">9:00-12:00</option>
+        <option value="">12:15-15:15</option>
+        <option value="">15:30-16:30</option>
+    </select>
+    <button>Saqlash</button>
+</form>
+<hr>
+{%for admin in adminlar%}
+    <p>
+        {{forloop.counter}}.{{admin.ism}}
+    </p>
+{%endfor%}
+</body>
+</html>

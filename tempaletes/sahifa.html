@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Eng kop sahifasi bor Kitoblar</title>
+</head>
+<body>
+<h1>Eng kop sahifasi bor Kitoblar</h1>
+<hr>
+{%for kitob in kitoblar%}
+    <p>
+        {{forloop.counter}}.{{kitob.nom}}
+    </p>
+{%endfor%}
+</body>
+</html>

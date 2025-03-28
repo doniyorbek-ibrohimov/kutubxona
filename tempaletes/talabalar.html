@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutubxona | talabalar</title>
+</head>
+<body>
+<h1>Talabalar royxati</h1>
+<form  method="get">
+  <input type="text" name="search"  value="{{search_param}}" placeholder="Ism kiriting">
+  <button type="submit" > Qidirish </button>
+</form>
+<hr>
+{%for talaba in talabalar%}
+    <p>
+        {{forloop.counter}}.
+        <a href="/talaba/{{talaba.id}}">{{talaba.ism}}</a>
+    </p>
+{%endfor%}
+<hr>
+<h2>Talaba qoshish</h2>
+<form method="post">
+    {% csrf_token %}
+    <label>Ism:</label>
+    <input type="text" name="ism">
+
+    <label>Guruh:</label>
+    <input type="text" name="guruh">
+    <br><br>
+    <label>Kurs:</label>
+    <input type="number" name="kurs">
+    <label>Kitob soni:</label>
+    <input type="number" name="kitob_soni">
+    <button>Saqlash</button>
+
+
+</form>
+</body>
+</html>

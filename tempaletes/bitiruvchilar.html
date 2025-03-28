@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Bitiruvchilar</title>
+</head>
+<body>
+<h1>Bitiruvchilarni Recordlari</h1>
+<hr>
+{%for record in recordlar%}
+    <p>
+        {{forloop.counter}}.{{record.talaba}}
+    </p>
+{%endfor%}
+
+</body>
+</html>

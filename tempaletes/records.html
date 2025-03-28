@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kutibxona | Recordlar Royxati</title>
+</head>
+<body>
+<h1>Recordlar Royxati</h1>
+<form  method="get">
+  <input type="text" name="search"  value="{{search_param}} " placeholder="Ism kiriting">
+  <button type="submit" >Qidirish </button>
+</form>
+<hr>
+{%for record in recordlar%}
+    <p>
+        {{forloop.counter}}.<a href="/record/{{record.id}}">{{record.talaba}}</a>
+    </p>
+{%endfor%}
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    <label for="talaba">Talaba</label>
+    <select name="talaba_id" id="talaba" required>
+        {%for talaba in talabalar%}
+            <option value="{{talaba.id}}">{{talaba.ism}}</option>
+        {%endfor%}
+    </select>
+    <br><br>
+    <label for="kitob">Kitob</label>
+    <select name="kitob_id" id="kitob" required>
+        {%for kitob in kitoblar%}
+            <option value="{{kitob.id}}">{{kitob.nom}}</option>
+        {%endfor%}
+    </select>
+    <br><br>
+    <label for="admin">Admin</label>
+    <select name="admin_id" id="admin">
+        {%for admin in adminlar%}
+            <option value="{{admin.id}}">{{admin.ism}}</option>
+        {%endfor%}
+    </select>
+    <br><br>
+    <label for="olish_sana">Olingan_sana</label>
+    <input type="date" name="olish_sana" id="olish_sana">
+    <br><br>
+    <label for="qaytish_sana">Qaytarilish_sanasi</label>
+    <input type="date" name="qayish_sana" id="qaytish_sana">
+    <br><br> <button>Qoshish</button>
+</form>
+</body>
+</html>
